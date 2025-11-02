@@ -1,0 +1,8 @@
+name: PrometheusExporter
+version: 0.1.0
+main: ChernegaSergiy\PrometheusExporter\Main
+api: 5.19.0
+load: POSTWORLD
+author: ChernegaSergiy
+website: https://github.com/newlandpe/PrometheusExporter
+description: Exposes PocketMine-MP metrics in Prometheus text format.

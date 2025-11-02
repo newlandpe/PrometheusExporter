@@ -1,0 +1,7 @@
+exporter:
+  address: 0.0.0.0
+  port: 9100
+  tick_interval: 20
+  socket_backlog: 16
+metrics:
+  include_memory_details: true
