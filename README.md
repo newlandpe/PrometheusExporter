@@ -17,10 +17,17 @@ Follow these quick steps to get the exporter running on your server:
 1. Copy this folder into your PocketMine-MP `plugins/` directory as `PrometheusExporter`.
 2. Ensure the plugin directory layout:
    ```
-   plugins/PrometheusExporter/
-     |-- plugin.yml
-     |-- resources/config.yml
-     `-- src/ChernegaSergiy/PrometheusExporter/*.php
+   plugins/
+   \-- PrometheusExporter/
+       +-- LICENSE
+       +-- README.md
+       +-- plugin.yml
+       +-- resources/
+       |   \-- config.yml
+       \-- src/ChernegaSergiy/PrometheusExporter/
+           +-- Main.php
+           +-- MetricsStore.php
+           \-- PrometheusHttpServer.php
    ```
 3. Start or reload PocketMine-MP. The console should log:
    ```
