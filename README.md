@@ -1,4 +1,4 @@
-# PrometheusExporter for PocketMine-MP
+# Prometheus Metrics Exporter for PocketMine-MP
 
 PrometheusExporter exposes basic PocketMine-MP metrics over an HTTP endpoint that Prometheus can scrape. It provides live telemetry for players, TPS, tick usage, and PHP memory, and keeps cumulative counters in `plugin_data` so joins/quits survive restarts.
 
