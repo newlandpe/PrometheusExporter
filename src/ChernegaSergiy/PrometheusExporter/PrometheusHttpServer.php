@@ -15,7 +15,6 @@ final class PrometheusHttpServer{
      * @param object|null $logger
      */
     public function __construct(string $address, int $port, int $backlog, $logger, callable $renderer){
-        $this->logger = $logger;
         $this->renderer = $renderer;
 
         $context = stream_context_create([
@@ -56,8 +55,8 @@ final class PrometheusHttpServer{
             return;
         }
 
-        /** @var resource $client */
         while(($client = @stream_socket_accept($this->socket, 0)) !== false){
+            /** @var resource $client */
             stream_set_blocking($client, true);
             $request = "";
             while(($line = fgets($client)) !== false){
