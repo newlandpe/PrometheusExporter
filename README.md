@@ -1,5 +1,7 @@
 # Prometheus Metrics Exporter for PocketMine-MP
 
+[![Poggit CI](https://poggit.pmmp.io/ci.shield/newlandpe/PrometheusExporter/PrometheusExporter)](https://poggit.pmmp.io/ci/newlandpe/PrometheusExporter/PrometheusExporter)
+
 PrometheusExporter exposes basic PocketMine-MP metrics over an HTTP endpoint that Prometheus can scrape. It provides live telemetry for players, TPS, tick usage, and PHP memory, and keeps cumulative counters in `plugin_data` so joins/quits survive restarts.
 
 ## Features
