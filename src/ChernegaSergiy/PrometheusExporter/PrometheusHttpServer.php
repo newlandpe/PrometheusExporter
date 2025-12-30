@@ -6,14 +6,13 @@ namespace ChernegaSergiy\PrometheusExporter;
 final class PrometheusHttpServer{
     /** @var resource|null */
     private $socket = null;
-    /** @var object|null */
-    private $logger;
     /** @var callable():string */
     private $renderer;
     private bool $isClosed = false;
 
     /**
      * @param callable():string $renderer
+     * @param object|null $logger
      */
     public function __construct(string $address, int $port, int $backlog, $logger, callable $renderer){
         $this->logger = $logger;
@@ -57,7 +56,7 @@ final class PrometheusHttpServer{
             return;
         }
 
-        /** @var resource|false $client */
+        /** @var resource $client */
         while(($client = @stream_socket_accept($this->socket, 0)) !== false){
             stream_set_blocking($client, true);
             $request = "";
